@@ -1,0 +1,63 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "Email": "user@user.com",
+      "Password": "8ed46d8"
+    }
+  ],
+  "Books": [
+    {
+      "title": "True states",
+      "author": "Rahul",
+      "date": "2023-08-30",
+      "price": 1000,
+      "id": 2
+    },
+    {
+      "title": "champion ",
+      "author": "Dipak",
+      "date": "2023-09-19",
+      "price": 500,
+      "id": 3
+    },
+    {
+      "title": "Bhagwat Geeta",
+      "author": "Krishna",
+      "date": "2023-09-01",
+      "price": 1000,
+      "id": 4
+    },
+    {
+      "title": "k",
+      "author": "p",
+      "date": "2023-09-15",
+      "price": 5,
+      "id": 5
+    },
+    {
+      "title": "l",
+      "author": "lll",
+      "date": "2023-09-25",
+      "price": 23,
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

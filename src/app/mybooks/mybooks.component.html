@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="top">
+        <form [formGroup]="books" >
+            <div class="formTop">
+                <div class="input">
+                    <label>Title</label>
+                    <input type="text" placeholder="Title name" formControlName="title">
+                </div>
+                <div class="input">
+                    <label>Author</label>
+                    <input type="text" placeholder="Author name" formControlName="author">
+                </div>
+                <div class="input">
+                    <label>Published date</label>
+                    <input type="date" placeholder="Title name" formControlName="date">
+                </div>
+                <div class="input">
+                    <label>Price</label>
+                    <input type="number" placeholder="Enter Price" formControlName="price">
+                </div>
+            </div>
+            <div class="formBottom margin-top">
+                <button (click)="booksAdd()" *ngIf="addBtn">ADD</button>
+                <button (click)="update()" *ngIf="updateBtn">update</button>
+            </div>
+        </form>
+        
+    </div>
+    <div class="bottom">
+        <table>
+            <thead class="tbl-header">
+                <tr>
+                    <th>Book Id</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Published Date</th>
+                    <th>Price</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody class="tbl-content">
+                <tr *ngFor="let item of booklist">
+                    
+                    <td>{{item.id}}</td>
+                    <td>{{item.title}}</td>
+                    <td>{{item.author}}</td>
+                    <td>{{item.date}}</td>
+                    <td>{{item.price}}</td>
+                    <td>
+                        <button class="margin-right" (click)="editBookId(item.id)">edit</button>
+                        <button   (click)="deleteBookId(item.id)">Delete</button>
+                    </td>
+                    <!-- <td><button mat-raised-button color="warn"  (click)="deleteBookId(item.id)">Delete</button></td> -->
+                </tr>
+                <!-- <tr>
+                    <td>1</td>
+                    <td>ab</td>
+                    <td>456</td>
+                    <td>a@gmail.com</td>
+                    <td>45</td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <button (click)="logOut()">Log out</button>
+</div>

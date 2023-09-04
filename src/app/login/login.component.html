@@ -1,0 +1,21 @@
+<div class="container">
+    <form [formGroup]="login" (ngSubmit)="loginFunction()">
+        <h3>Login</h3>
+        <div class="email">
+            <label>Email</label>
+            <input type="email" placeholder="Enter your Email Id" formControlName="Email">
+            <span *ngIf="login.controls['Email'].hasError('required') && login.controls['Email'].touched">email required</span>
+            <span *ngIf="login.controls['Email'].hasError('pattern') " style="color: red;">wrong email</span>
+            <!-- <span *ngIf="login.controls['Email'].valid" style="color: green;">correct</span> -->
+        </div>
+        <div class="pass">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your Password" formControlName="Password">
+            <span *ngIf="login.controls['Password'].hasError('required') && login.controls['Password'].touched">Password required</span>
+            <span *ngIf="login.controls['Password'].hasError('pattern')">Password is wrong</span>
+            <!-- <span *ngIf="login.controls['Password'].hasError('minLength')">minimum length is 4</span> -->
+            <!-- <span *ngIf="login.controls['Password'].valid" style="color: green;">correct</span> -->
+        </div>
+        <button [disabled]="login.invalid" type="submit">Login</button>
+    </form>
+</div>
